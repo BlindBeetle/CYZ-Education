@@ -10,7 +10,7 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
 # 1-preparing data
-input_dir = 'C:/Users/poyra/OneDrive/Documents/Visual Studio Code/Python/CYZ-Education/Image Classification - Cats and Dogs/data/test_set/test_set'
+input_dir = 'C:/Users/poyra/OneDrive/Documents/Visual Studio Code/Python/CYZ-Education/Image Classification - Cats and Dogs/data/training_set/training_set'
 categories = ['cats', 'dogs']
 
 data = []
@@ -18,12 +18,11 @@ labels = []
 for category_idx, category in enumerate(categories):
     category_dir = os.path.join(input_dir, category)
     for file in os.listdir(category_dir):
-        if file.endswith(('.jpg', '.jpeg', '.png')):  # Check if file is an image
-            img_path = os.path.join(category_dir, file)
-            img = imread(img_path)
-            img = resize(img, (15, 15))
-            data.append(img.flatten())
-            labels.append(category_idx)
+        img_path = os.path.join(category_dir, file)
+        img = imread(img_path)
+        img = resize(img, (15, 15))
+        data.append(img.flatten())
+        labels.append(category_idx)
 
 data = np.asarray(data)
 labels = np.asarray(labels)

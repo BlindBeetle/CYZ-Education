@@ -10,7 +10,7 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
 # 1-preparing data
-input_dir = 'C:/Users/poyra/OneDrive/Documents/Visual Studio Code/Python/CYZ-Eğitim/Image Classification - Cats and Dogs/data/test_set/test_set'
+input_dir = 'C:/Users/poyra/OneDrive/Documents/Visual Studio Code/Python/CYZ-Education/Image Classification - Cats and Dogs/data/test_set/test_set'
 categories = ['cats', 'dogs']
 
 data = []
